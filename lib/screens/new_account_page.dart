@@ -19,20 +19,11 @@ class NewAccountPage extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: Row(
                   children: <Widget>[
-                    // IconButton(
-                    //     splashRadius: 20,
-                    //     icon: const Icon(
-                    //       Icons.arrow_back_ios,
-                    //       color: Colors.cyan,
-                    //     ),
-                    //     onPressed: () {
-                    //       print("Hello");
-                    //     }),
                     SizedBox.fromSize(
                       size: const Size(40, 40),
                       child: ClipOval(
                         child: Material(
-                          color: Colors.cyan,
+                          color: const Color.fromRGBO(33, 224, 189, 1),
                           child: InkWell(
                               onTap: () {
                                 Navigator.of(context)
@@ -54,7 +45,7 @@ class NewAccountPage extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
-                              color: Colors.cyan),
+                              color: Color.fromRGBO(33, 224, 189, 1)),
                         )
                       ],
                     ),
@@ -66,7 +57,10 @@ class NewAccountPage extends StatelessWidget {
               ),
               const Text(
                 'Nhập thông tin của bạn',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22,
+                    color: Color.fromRGBO(33, 224, 189, 1)),
               ),
               const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),

@@ -1,6 +1,9 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:grabvn/screens/chose_driver_booker_page.dart';
+
+import '../../new_account_page.dart';
 
 class NewAccountForm extends StatefulWidget {
   @override
@@ -40,7 +43,7 @@ class _NewAccountFormState extends State<NewAccountForm> {
                 SizedBox(
                   width: 10,
                 ),
-                Text('Ho tên:', style: TextStyle(fontSize: 18))
+                Text('Họ tên:', style: TextStyle(fontSize: 18))
               ],
             ),
             const SizedBox(
@@ -52,27 +55,16 @@ class _NewAccountFormState extends State<NewAccountForm> {
                       borderRadius: BorderRadius.all(Radius.circular(10)))),
             ),
             const SizedBox(height: 20),
-            // TextButton(
-            //   style: TextButton.styleFrom(
-            //       elevation: 5,
-            //       fixedSize: const Size(360, 60),
-            //       foregroundColor: Colors.white,
-            //       backgroundColor: Colors.cyan,
-            //       textStyle: const TextStyle(fontSize: 20),
-            //       shape: RoundedRectangleBorder(
-            //           borderRadius: BorderRadius.circular(10))),
-            //   onPressed: () {
-            //     print("Clickkk...");
-            //   },
-            //   child: const Text('Xác Nhận'),
-            // ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context)
+                    .pushNamed(ChoseDriverBookerPage.routeName);
+              },
               style: TextButton.styleFrom(
                   elevation: 5,
                   fixedSize: const Size(370, 60),
                   foregroundColor: Colors.white,
-                  backgroundColor: Colors.cyan,
+                  backgroundColor: const Color.fromRGBO(33, 224, 189, 1),
                   textStyle: const TextStyle(fontSize: 20),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10))),
