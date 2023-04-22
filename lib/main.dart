@@ -19,9 +19,7 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: AppRoute.onGenerateRoute,
       // initialRoute: AppRouter.splash,
       // onGenerateRoute: AppRouter.onGenerateRoute,
-      theme: ThemeData(
-        primarySwatch: Colors.cyan,
-      ),
+      theme: ThemeData(primarySwatch: Colors.cyan, fontFamily: "UTM Avo"),
       home: NewAccountPage(),
     );
   }

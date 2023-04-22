@@ -15,9 +15,18 @@ class _LoginPage extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: SingleChildScrollView(
-          child: Column(
-              children: <Widget>[const SizedBox(height: 200), LoginForm()]),
+          child: Column(children: <Widget>[
+            const SizedBox(height: 50),
+            const Image(
+              image: AssetImage('assets/images/logo.jpg'),
+              width: 200,
+              height: 200,
+            ),
+            const SizedBox(height: 50),
+            LoginForm()
+          ]),
         ),
       ),
     );

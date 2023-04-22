@@ -19,47 +19,61 @@ class NewAccountPage extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     SizedBox.fromSize(
-                      size: const Size(40, 40),
+                      size: const Size(35, 35),
                       child: ClipOval(
                         child: Material(
-                          color: const Color.fromRGBO(33, 224, 189, 1),
-                          child: InkWell(
+                            elevation: 20,
+                            color: const Color.fromRGBO(10, 180, 149, 1),
+                            child: InkWell(
                               onTap: () {
                                 Navigator.of(context)
                                     .pushNamed(LoginPage.routeName);
                               },
-                              child: const Icon(
-                                Icons.arrow_back_ios,
-                                size: 22,
-                              )),
-                        ),
+                              child: Container(
+                                padding: const EdgeInsets.only(left: 8),
+                                decoration: const BoxDecoration(),
+                                child: const Icon(
+                                  Icons.arrow_back_ios,
+                                  color: Colors.white,
+                                  size: 22,
+                                ),
+                              ),
+                            )),
                       ),
                     ),
                     const SizedBox(width: 10),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const <Widget>[
-                        Text(
-                          "Đăng Kí tài khoản",
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(33, 224, 189, 1)),
-                        )
-                      ],
-                    ),
+                    Expanded(
+                        child: Container(
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "Đăng Kí tài khoản",
+                        style: TextStyle(
+                            fontSize: 22,
+                            fontFamily: "UTM Avo",
+                            fontWeight: FontWeight.w600,
+                            color: Color.fromRGBO(10, 180, 149, 1)),
+                      ),
+                    )),
                   ],
                 ),
               ),
-              Container(
+              const SizedBox(
+                height: 10,
+              ),
+              const Image(
+                image: AssetImage('assets/images/logo.jpg'),
+                width: 200,
                 height: 200,
+              ),
+              const SizedBox(
+                height: 10,
               ),
               const Text(
                 'Nhập thông tin của bạn',
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 22,
-                    color: Color.fromRGBO(33, 224, 189, 1)),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                ),
               ),
               const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
