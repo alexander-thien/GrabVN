@@ -17,8 +17,6 @@ class MyApp extends StatelessWidget {
       title: 'Food app witd navigation',
       initialRoute: LoginPage.routeName,
       onGenerateRoute: AppRoute.onGenerateRoute,
-      // initialRoute: AppRouter.splash,
-      // onGenerateRoute: AppRouter.onGenerateRoute,
       theme: ThemeData(primarySwatch: Colors.cyan, fontFamily: "UTM Avo"),
       home: NewAccountPage(),
     );

@@ -1,7 +1,8 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-import 'package:grabvn/screens/chose_driver_booker_page.dart';
+
+import '../../home_page.dart';
 
 class NewAccountForm extends StatefulWidget {
   @override
@@ -38,6 +39,32 @@ class _NewAccountFormState extends State<NewAccountForm> {
                 decoration: InputDecoration(
                     prefixIcon: Icon(
                       Icons.phone,
+                      color: Color.fromRGBO(10, 180, 149, 1),
+                    ),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10)))),
+              ),
+            ),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: const [
+                SizedBox(
+                  width: 10,
+                ),
+                Text('Họ tên:',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700))
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const SizedBox(
+              height: 50,
+              child: TextField(
+                decoration: InputDecoration(
+                    prefixIcon: Icon(
+                      Icons.manage_accounts,
                       color: Color.fromRGBO(10, 180, 149, 1),
                     ),
                     border: OutlineInputBorder(
@@ -84,7 +111,7 @@ class _NewAccountFormState extends State<NewAccountForm> {
                 SizedBox(
                   width: 10,
                 ),
-                Text('Nhập lại Mật khẩu:',
+                Text('Nhập lại mật khẩu:',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700))
               ],
             ),
@@ -106,37 +133,10 @@ class _NewAccountFormState extends State<NewAccountForm> {
                         borderRadius: BorderRadius.all(Radius.circular(10)))),
               ),
             ),
-            const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: const [
-                SizedBox(
-                  width: 10,
-                ),
-                Text('Họ tên:',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700))
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const SizedBox(
-              height: 50,
-              child: TextField(
-                decoration: InputDecoration(
-                    prefixIcon: Icon(
-                      Icons.manage_accounts,
-                      color: Color.fromRGBO(10, 180, 149, 1),
-                    ),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(10)))),
-              ),
-            ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context)
-                    .pushNamed(ChoseDriverBookerPage.routeName);
+                Navigator.of(context).pushNamed(HomePage.routeName);
               },
               style: TextButton.styleFrom(
                   elevation: 5,
@@ -150,7 +150,7 @@ class _NewAccountFormState extends State<NewAccountForm> {
                 mainAxisSize: MainAxisSize.min,
                 children: const [
                   Text(
-                    'Tiếp theo',
+                    'Đăng kí',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   SizedBox(

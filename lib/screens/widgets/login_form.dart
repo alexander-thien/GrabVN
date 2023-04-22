@@ -1,7 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-import 'package:grabvn/screens/chose_driver_booker_page.dart';
+import '../home_page.dart';
 import '../new_account_page.dart';
 
 class LoginForm extends StatefulWidget {
@@ -76,8 +76,7 @@ class _LoginForm extends State<LoginForm> {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context)
-                    .pushNamed(ChoseDriverBookerPage.routeName);
+                Navigator.of(context).pushNamed(HomePage.routeName);
               },
               style: TextButton.styleFrom(
                   elevation: 5,
@@ -91,7 +90,7 @@ class _LoginForm extends State<LoginForm> {
                 mainAxisSize: MainAxisSize.min,
                 children: const [
                   Text(
-                    'Tiếp theo',
+                    'Đăng nhập',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
