@@ -9,9 +9,8 @@ class NewAccountPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: SafeArea(
-            child: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               Padding(
@@ -41,7 +40,7 @@ class NewAccountPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const <Widget>[
                         Text(
-                          "New Account",
+                          "Đăng Kí tài khoản",
                           style: TextStyle(
                               fontSize: 22,
                               fontWeight: FontWeight.bold,
@@ -67,7 +66,7 @@ class NewAccountPage extends StatelessWidget {
               NewAccountForm()
             ],
           ),
-        )),
+        ),
       ),
     );
   }
