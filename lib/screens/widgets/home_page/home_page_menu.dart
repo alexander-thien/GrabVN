@@ -22,6 +22,8 @@ class _HomePageMenu extends State<HomePageMenu> {
               Column(
                 children: const [
                   Image(
+                      width: 60,
+                      height: 60,
                       image:
                           AssetImage('assets/images/icons8-driver-64 1.png')),
                   SizedBox(
@@ -30,7 +32,7 @@ class _HomePageMenu extends State<HomePageMenu> {
                   Text(
                     "Lái xe",
                     style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                         color: Color.fromRGBO(10, 180, 149, 1)),
                   )
@@ -39,6 +41,8 @@ class _HomePageMenu extends State<HomePageMenu> {
               Column(
                 children: const [
                   Image(
+                      width: 60,
+                      height: 60,
                       image: AssetImage(
                           'assets/images/icons8-motorcycle-50 1.png')),
                   SizedBox(
@@ -47,7 +51,7 @@ class _HomePageMenu extends State<HomePageMenu> {
                   Text(
                     "Bắt xe",
                     style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                         color: Color.fromRGBO(10, 180, 149, 1)),
                   )
