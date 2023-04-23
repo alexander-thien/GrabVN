@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grabvn/screens/payment_page.dart';
 
 import '../../history_page.dart';
 import '../../new_account_page.dart';
@@ -95,7 +96,7 @@ class _MenuBarCusTom extends State<MenuBarCusTom> {
                 children: [
                   InkWell(
                     onTap: () {
-                      print("Ehllo");
+                      Navigator.of(context).pushNamed(PaymentPage.routeName);
                     },
                     child: Row(
                       children: const [

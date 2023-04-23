@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grabvn/screens/home_page.dart';
+import 'package:grabvn/screens/payment_page.dart';
 import '../screens/history_page.dart';
 import '../screens/login_page.dart';
 import '../screens/new_account_page.dart';
@@ -19,6 +20,9 @@ class AppRoute {
       case HistoryPage.routeName:
         return MaterialPageRoute(
             builder: (context) => HistoryPage(), settings: settings);
+      case PaymentPage.routeName:
+        return MaterialPageRoute(
+            builder: (context) => PaymentPage(), settings: settings);
     }
   }
 }
