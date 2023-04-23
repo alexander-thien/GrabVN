@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:grabvn/screens/home_page.dart';
 import 'package:grabvn/screens/payment_page.dart';
 
 import '../../history_page.dart';
+import '../../list_booking.dart';
 import '../../new_account_page.dart';
 
 // ignore: must_be_immutable
@@ -94,6 +96,53 @@ class _MenuBarCusTom extends State<MenuBarCusTom> {
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
               child: Column(
                 children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushNamed(HomePage.routeName);
+                    },
+                    child: Row(
+                      children: const [
+                        Icon(
+                          // <-- Icon
+                          color: Color.fromRGBO(10, 180, 149, 1),
+                          Icons.home,
+                          size: 35.0,
+                        ),
+                        SizedBox(width: 10),
+                        Text(
+                          "Trang chủ",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromRGBO(10, 180, 149, 1)),
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(ListBookingPage.routeName);
+                    },
+                    child: Row(
+                      children: const [
+                        Icon(
+                          // <-- Icon
+                          color: Color.fromRGBO(10, 180, 149, 1),
+                          Icons.list_alt_sharp,
+                          size: 35.0,
+                        ),
+                        SizedBox(width: 10),
+                        Text(
+                          "Danh sách đặt xe",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromRGBO(10, 180, 149, 1)),
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 20),
                   InkWell(
                     onTap: () {
                       Navigator.of(context).pushNamed(PaymentPage.routeName);

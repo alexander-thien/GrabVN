@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grabvn/screens/home_page.dart';
+import 'package:grabvn/screens/list_booking.dart';
 import 'package:grabvn/screens/payment_page.dart';
 import '../screens/history_page.dart';
 import '../screens/login_page.dart';
@@ -23,6 +24,9 @@ class AppRoute {
       case PaymentPage.routeName:
         return MaterialPageRoute(
             builder: (context) => PaymentPage(), settings: settings);
+      case ListBookingPage.routeName:
+        return MaterialPageRoute(
+            builder: (context) => ListBookingPage(), settings: settings);
     }
   }
 }

@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:grabvn/screens/history_page.dart';
+import 'package:grabvn/screens/payment_page.dart';
+import 'package:grabvn/screens/widgets/booking_item/list_booking_item.dart';
 import 'package:grabvn/screens/widgets/menu_bar/menu_bar.dart';
-import 'package:grabvn/screens/widgets/payment_card/pay_ment_card.dart';
 
-class PaymentPage extends StatefulWidget {
-  static const String routeName = "PaymentPage";
-
+class ListBookingPage extends StatefulWidget {
+  static const String routeName = "ListBookingPage";
   @override
-  State<StatefulWidget> createState() {
-    return _PaymentPage();
-  }
+  State<StatefulWidget> createState() => _ListBookingPage();
 }
 
-class _PaymentPage extends State<PaymentPage> {
+class _ListBookingPage extends State<ListBookingPage> {
   GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -55,7 +53,7 @@ class _PaymentPage extends State<PaymentPage> {
                       child: Container(
                     alignment: Alignment.center,
                     child: const Text(
-                      "Giao Dịch",
+                      "Danh sách đặt xe",
                       style: TextStyle(
                           fontSize: 22,
                           fontFamily: "UTM Avo",
@@ -103,11 +101,18 @@ class _PaymentPage extends State<PaymentPage> {
                           Container(
                             margin: const EdgeInsets.only(top: 20),
                             child: Column(children: [
-                              PaymentCard(),
-                              PaymentCard(),
-                              PaymentCard(),
-                              PaymentCard(),
-                              PaymentCard(),
+                              BookingItem(
+                                name: 'Thien',
+                                status: 1,
+                              ),
+                              BookingItem(
+                                name: 'Hieu',
+                                status: 2,
+                              ),
+                              BookingItem(
+                                name: 'Thien Tu',
+                                status: 3,
+                              ),
                             ]),
                           ),
                         ],
@@ -119,73 +124,67 @@ class _PaymentPage extends State<PaymentPage> {
               padding: const EdgeInsets.all(20),
               height: 200,
               child: Container(
-                child: Column(children: [
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                        elevation: 5,
-                        fixedSize: const Size(370, 60),
-                        foregroundColor: Colors.white,
-                        backgroundColor: const Color.fromRGBO(10, 180, 149, 1),
-                        textStyle: const TextStyle(fontSize: 20),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10))),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: const [
-                        Text(
-                          'Thêm thẻ mới',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context)
+                              .pushNamed(PaymentPage.routeName);
+                        },
+                        child: Column(
+                          children: const [
+                            Image(
+                                width: 80,
+                                height: 80,
+                                image: AssetImage(
+                                    'assets/images/icons8-card-payment-64 1.png')),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Thanh toán",
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromRGBO(10, 180, 149, 1)),
+                            )
+                          ],
                         ),
-                        SizedBox(
-                          width: 5,
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context)
+                              .pushNamed(HistoryPage.routeName);
+                        },
+                        child: Column(
+                          children: const [
+                            Image(
+                                width: 80,
+                                height: 80,
+                                image: AssetImage(
+                                    'assets/images/icons8-time-machine-64 5.png')),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Lịch Sử",
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromRGBO(10, 180, 149, 1)),
+                            )
+                          ],
                         ),
-                        Icon(
-                          // <-- Icon
-                          Icons.add,
-                          size: 24.0,
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(370, 60),
-                        elevation: 5,
-                        backgroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: const BorderSide(
-                                color: Color.fromRGBO(10, 180, 149, 1)))),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: const [
-                        Text(
-                          'Đăng kí',
-                          style: TextStyle(
-                              color: Color.fromRGBO(10, 180, 149, 1),
-                              fontSize: 17),
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Icon(
-                          // <-- Icon
-                          Icons.navigate_next,
-                          size: 24.0,
-                          color: Color.fromRGBO(10, 180, 149, 1),
-                        ),
-                      ],
-                    ),
-                  ),
-                ]),
+                      )
+                    ]),
               ),
             )
           ],
         ),
       ),
     );
+    ;
   }
 }

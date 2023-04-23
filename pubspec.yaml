@@ -65,6 +65,8 @@ flutter:
     - assets/images/logo.jpg
     - assets/images/icons8-driver-64 1.png
     - assets/images/icons8-motorcycle-50 1.png
+    - assets/images/icons8-card-payment-64 1.png
+    - assets/images/icons8-time-machine-64 5.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
