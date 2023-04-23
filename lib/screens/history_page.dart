@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:grabvn/screens/models/history_data_card.dart';
+import 'package:grabvn/screens/widgets/history_card/history_card.dart';
 import 'package:grabvn/screens/widgets/menu_bar/menu_bar.dart';
+import '../screens/models/history_data_card.dart';
 
 class HistoryPage extends StatefulWidget {
   static const String routeName = 'HistoryPage';
@@ -71,20 +74,32 @@ class _HistoryPage extends State<HistoryPage> {
             ),
             Expanded(
               child: Container(
+                width: double.infinity,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    borderRadius: const BorderRadius.all(Radius.circular(20)),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 5,
                         blurRadius: 7,
-                        offset: Offset(0, 3), // changes position of shadow
+                        offset:
+                            const Offset(0, 3), // changes position of shadow
                       ),
                     ],
+                  ),
+                  child: SingleChildScrollView(
+                    child: Column(
+                        children: historycard
+                            .map((e) => Historycard(
+                                  historyDataCard: e,
+                                ))
+                            .toList()),
                   ),
                 ),
               ),
