@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grabvn/screens/widgets/home_page/home_page_menu.dart';
+import 'package:grabvn/screens/widgets/menu_bar/menu_bar.dart';
 
 class HomePage extends StatefulWidget {
   static const String routeName = "HomePage";
@@ -19,8 +20,8 @@ class _HomePage extends State<HomePage> {
       child: Scaffold(
         key: _globalKey,
         backgroundColor: Colors.white,
-        drawer: const Drawer(
-          child: Center(child: Text('Left!')),
+        drawer: Drawer(
+          child: MenuBarCusTom(),
         ),
         body: SingleChildScrollView(
           child: Column(children: <Widget>[
@@ -29,16 +30,6 @@ class _HomePage extends State<HomePage> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // IconButton(
-                  //   icon: const Icon(
-                  //     Icons.list_sharp,
-                  //     size: 40,
-                  //   ),
-                  //   color: const Color.fromRGBO(10, 180, 149, 1),
-                  //   onPressed: () {
-                  //     print("Hello");
-                  //   },
-                  // ),
                   SizedBox.fromSize(
                     size: const Size(40, 40),
                     child: ClipOval(
